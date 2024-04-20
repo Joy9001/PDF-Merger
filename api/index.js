@@ -2,7 +2,7 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import PDFMerger from "pdf-merger-js";
-const upload = multer({ dest: "/tmp/uploads/" });
+const upload = multer({ dest: path.join(process.cwd(), "tmp/uploads") });
 const app = express();
 const port = 3000;
 
