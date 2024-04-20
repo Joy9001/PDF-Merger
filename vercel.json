@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"outputDirectory": "./src/templates",
+	"outputDirectory": "src",
 	"builds": [
 		{
 			"src": "./api/index.js",
