@@ -2,7 +2,7 @@ import express from "express";
 import multer from "multer";
 import path from "path";
 import PDFMerger from "pdf-merger-js";
-const upload = multer({ dest: path.join(process.cwd(), "tmp/uploads") });
+const upload = multer({ dest: "/tmp/uploads" });
 const app = express();
 const port = 3000;
 
@@ -19,7 +19,7 @@ const mergePdfs = async (p) => {
 	return n;
 };
 
-app.use("/static", express.static(path.join(process.cwd(), "tmp/public")));
+app.use("/static", express.static("tmp/uploads"));
 app.use(express.static(path.join(process.cwd(), "src")));
 
 app.get("/", (req, res) => {
