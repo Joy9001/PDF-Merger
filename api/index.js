@@ -19,7 +19,7 @@ const mergePdfs = async (p) => {
 	return n;
 };
 
-app.use("/static", express.static("tmp/uploads"));
+app.use("/static", express.static(path.join(process.cwd(), "tmp/uploads")));
 app.use(express.static(path.join(process.cwd(), "src")));
 
 app.get("/", (req, res) => {
@@ -36,7 +36,7 @@ app.get("/merge", (req, res) => {
 
 app.post("/merge", upload.array("pdfs", 12), async (req, res, next) => {
 	let n = await mergePdfs(req.files);
-	res.redirect(`http://localhost:${port}/static/merged_${n}.pdf`);
+	res.redirect(`https://pdf-merger-rho.vercel.app/static/merged_${n}.pdf`);
 });
 
 app.listen(port, () => {
