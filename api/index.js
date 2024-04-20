@@ -19,8 +19,8 @@ const mergePdfs = async (p) => {
 	return n;
 };
 
-app.use("/static", express.static("tmp/uploads"));
-app.use(express.static("src"));
+app.use("/static", express.static(path.join(process.cwd(), "tmp/public")));
+app.use(express.static(path.join(process.cwd(), "src")));
 
 app.get("/", (req, res) => {
 	res.sendFile("index.html", {
