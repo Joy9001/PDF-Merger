@@ -1,6 +1,5 @@
 {
 	"version": 2,
-	"outputDirectory": "./src/templates",
 	"builds": [
 		{
 			"src": "./server.js",
