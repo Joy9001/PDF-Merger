@@ -1,9 +1,7 @@
 import express from "express";
-import path from "path";
 import multer from "multer";
 import PDFMerger from "pdf-merger-js";
-import { root } from "postcss";
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: "tmp/uploads/" });
 const app = express();
 const port = 3000;
 
@@ -15,12 +13,12 @@ const mergePdfs = async (p) => {
 	}
 
 	let n = new Date().getTime();
-	await merger.save(`public/merged_${n}.pdf`);
+	await merger.save(`tmp/public/merged_${n}.pdf`);
 
 	return n;
 };
 
-app.use("/static", express.static("public"));
+app.use("/static", express.static("tmp"));
 app.use("/static", express.static("uploads"));
 app.use(express.static("src"));
 
