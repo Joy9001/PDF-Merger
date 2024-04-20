@@ -2,11 +2,12 @@
 	"name": "pdf_merger",
 	"version": "1.0.0",
 	"description": "",
-	"main": "merge.js",
+	"main": "server.js",
 	"type": "module",
 	"scripts": {
-		"build": "npx tailwindcss -i ./templates/app.css -o ./templates/output.css --watch",
-		"start": "nodemon server.js"
+		"build": "npx tailwindcss -i ./src/css/app.css -o ./src/css/output.css --watch",
+		"dev": "nodemon server.js",
+		"start": "node server.js"
 	},
 	"keywords": [],
 	"author": "",

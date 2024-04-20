@@ -5,23 +5,24 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
-  <link rel="stylesheet" href="./output.css" />
+  <link rel="stylesheet" href="/css/output.css" />
   <title>Alpha PDFX</title>
 </head>
 
 <body>
   <!-- header -->
-  <div class="people_header sticky flex h-14 max-w-full flex-row items-center justify-between shadow-lg"
-    id="people_navbar">
+  <div class="people_header sticky flex h-14 max-w-full flex-row items-center justify-between shadow-lg" id="people_navbar">
     <!-- head 1 -->
     <div class="head-1 ml-5 flex items-center justify-center space-x-5">
       <!-- Logo & Name-->
-      <a href="./index.html">
+      <a href="/" class="flex items-center space-x-2">
+        <div class="logo h-10 w-14">
+          <img src="/images/pdf_logo.png" alt="logo" />
+        </div>
         <div class="flex items-center space-x-2">
           <span class="webname text-xl font-bold text-violet-800" title="Social">Alpha PDFX</span>
         </div>
       </a>
-
     </div>
 
     <!-- head 2 -->
@@ -29,13 +30,13 @@
       <div class="nav_links flex h-full min-w-[25vw] items-center justify-between">
         <!-- Home -->
         <div class="nav_link">
-          <a href="index.html">
+          <a href="/">
             <h1>Home</h1>
           </a>
         </div>
         <!-- Merge -->
         <div class="nav_link active">
-          <a href="./merge.html">
+          <a href="/merge">
             <h1>Merge</h1>
           </a>
         </div>
@@ -64,47 +65,38 @@
     <div class="head-3 mr-6 flex items-center space-x-2 lg:pl-[10vw]">
       <!-- Search Bar -->
       <div class="searchbar flex items-center rounded-lg border-2 border-black bg-slate-100 px-3 max-xl:hidden">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)"
-          class="h-5 w-5">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(-1, 0, 0, 1, 0, 0)" class="h-5 w-5">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
-            <path
-              d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
-              stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </g>
         </svg>
-        <input
-          class="text-md rounded-full bg-transparent p-[0.45rem] max-w-[15vw] pl-3 placeholder-slate-400 outline-none focus:outline-none"
-          placeholder="Search" type="search" id="people_search" />
+        <input class="text-md rounded-full bg-transparent p-[0.45rem] max-w-[15vw] pl-3 placeholder-slate-400 outline-none focus:outline-none" placeholder="Search" type="search" id="people_search" />
       </div>
     </div>
   </div>
 
-
   <div class="container-div flex-col justify-center items-center space-y-10">
     <div class="text-center mt-10">
       <h1 class="text-3xl font-bold text-violet-700">Merge PDFs</h1>
-      <h5 class="text-gray-500 mt-2">Please upload PDFs you want to merge.</h5>
+      <h5 class="text-gray-500 mt-2">
+        Please upload PDFs you want to merge.
+      </h5>
     </div>
 
     <div class="flex justify-center">
-      <form method="post" action="/merge" enctype="multipart/form-data"
-        class="bg-violet-100 shadow-inner rounded px-8 pt-6 pb-8 mb-4 h-20 w-[40rem]">
+      <form method="post" action="/merge" enctype="multipart/form-data" class="bg-violet-100 shadow-inner rounded px-8 pt-6 pb-8 mb-4 h-20 w-[40rem]">
         <div class="flex items-center justify-between">
-          <input type="file" name="pdfs"
-            class="shadow-md border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            aria-label="Upload" multiple accept=".pdf" />
-          <button class="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded ml-4 shadow-lg"
-            type="submit" value="submit">
+          <input type="file" name="pdfs" class="shadow-md border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" aria-label="Upload" multiple accept=".pdf" />
+          <button class="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded ml-4 shadow-lg" type="submit" value="submit">
             <b>Upload</b>
           </button>
         </div>
       </form>
     </div>
-
   </div>
 </body>
-<script src="./app.js"></script>
+<script src="/js/app.js"></script>
 
 </html>
