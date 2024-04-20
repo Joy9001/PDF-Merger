@@ -1,5 +1,6 @@
 import express from "express";
 import multer from "multer";
+import path from "path";
 import PDFMerger from "pdf-merger-js";
 const upload = multer({ dest: "/tmp/uploads/" });
 const app = express();
@@ -22,11 +23,15 @@ app.use("/static", express.static("tmp/uploads"));
 app.use(express.static("src"));
 
 app.get("/", (req, res) => {
-	res.sendFile("templates/index.html", { root: "./src" });
+	res.sendFile("index.html", {
+		root: path.join(process.cwd(), "src/templates"),
+	});
 });
 
 app.get("/merge", (req, res) => {
-	res.sendFile("templates/merge.html", { root: "./src" });
+	res.sendFile("merge.html", {
+		root: path.join(process.cwd(), "src/templates"),
+	});
 });
 
 app.post("/merge", upload.array("pdfs", 12), async (req, res, next) => {
