@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
 import PDFMerger from "pdf-merger-js";
-const upload = multer({ dest: "tmp/uploads/" });
+const upload = multer({ dest: "/tmp/uploads/" });
 const app = express();
 const port = 3000;
 
