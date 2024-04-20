@@ -14,7 +14,7 @@ const mergePdfs = async (p) => {
 	}
 
 	let n = new Date().getTime();
-	await merger.save(path.join(process.cwd(), `tmp/uploads/merged_${n}.pdf`));
+	await merger.save(`/tmp/uploads/merged_${n}.pdf`);
 
 	return n;
 };
